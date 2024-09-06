@@ -1,3 +1,8 @@
+// https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-list
+// Prefer {}. The rules for {} initialization are simpler, more general, less ambiguous, and safer than for other forms of initialization.
+// Use = only when you are sure that there can be no narrowing conversions. For built-in arithmetic types, use = only with auto.
+// Avoid () initialization, which allows parsing ambiguities.
+
 #include <iostream>
 
 
@@ -40,7 +45,7 @@ int main(){
     //int bad_initialization ( doesnt_exist3 + doesnt_exist4 );
 
     //Information lost. less safe than braced initializers
-    int narrowing_conversion_functional (2.9);
+    int narrowing_conversion_functional (2.9); //Initializes to 2
     
     
     std::cout << "Apple count : " << apple_count << std::endl;
@@ -55,7 +60,7 @@ int main(){
     int bike_count = 2;
     int truck_count = 7;
     int vehicle_count = bike_count +truck_count;
-    int narrowing_conversion_assignment = 2.9;
+    int narrowing_conversion_assignment = 2.9; //Initializes to 2
 
     std::cout << "Bike count : " << bike_count << std::endl;
     std::cout << "Truck count : " << truck_count << std::endl;
