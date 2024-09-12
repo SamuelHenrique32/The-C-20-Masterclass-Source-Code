@@ -1,3 +1,5 @@
+//The main advantage of this feature is that it allows us to use a function to evaluate compile-time constant
+
 #include <iostream>
 
 

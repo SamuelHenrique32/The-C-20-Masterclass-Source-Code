@@ -1,3 +1,5 @@
+//This specifier asserts that a variable has constant initialization – it sets the initial values of the static variables to a compile-time constant
+
 #include <iostream>
 
 const int val1 {33};

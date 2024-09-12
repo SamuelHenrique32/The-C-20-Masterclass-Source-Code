@@ -1,3 +1,7 @@
+//The term "literal" in computer programming terminology refers to a textual representation of a value to be assigned to a variable
+//int x = 10;
+//10 is an integer literal assigned to "x"
+
 #include <iostream>
 
 
