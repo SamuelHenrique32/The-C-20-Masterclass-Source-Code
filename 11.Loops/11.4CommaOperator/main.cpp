@@ -14,7 +14,7 @@ int main(){
     std::cout << "number1 : " << number1 << std::endl; // 60
     std::cout << "number2 : " << number2 << std::endl; // 20
     std::cout << "number3 : " << number3 << std::endl; // 33
-    std::cout << "result : " <<  result << std::endl; // 33
+    std::cout << "result : " <<  result << std::endl; // 33 (last operation)
    
     return 0;
 }
