@@ -3,7 +3,7 @@
 
 int main(){
 
-    /*
+
     //A raw variable that can be modified
 	std::cout << std::endl;
     std::cout << "Raw variable that can be modified : " << std::endl;
@@ -19,12 +19,12 @@ int main(){
     std::cout << "number : " << number << std::endl;
 	std::cout << "&number : " << &number << std::endl;
     std::cout << std::endl;
-    */
+
 
 
 
 	//Pointer : Can modify the data and the pointer itself
-    /*
+
     int *p_number1 {nullptr};
     int  number1{23};
     
@@ -52,13 +52,13 @@ int main(){
 	std::cout << "number1 : " << number1 << std::endl;
 	std::cout << "number2 : " << number2 << std::endl;
     std::cout << std::endl;
-    */
+
 
 
 
     //Pointer to const
 	//Pointer pointing to constant data : You can't modify the data through pointer
-    /*
+
     std::cout << "Pointer is modifiable , pointed to value is constant : " << std::endl;
 	int number3 {632}; // Although you can omit the const on number3 here and it is still 
                              // going to compile, it is advised to be as explicit as possible in
@@ -85,12 +85,12 @@ int main(){
     std::cout << "*p_number3 : " << *p_number3 << std::endl;
     
     std::cout << std::endl; 
-    */
+
 
 
 
 	//const keyword applies to the variable name.
-    /*
+
 	std::cout << "const keyword applies to a variable name : " << std::endl;
 	
 	int protected_var {10}; // Can make it const to protect it if we want.Show this
@@ -112,11 +112,11 @@ int main(){
 	const int some_data{55};
 	//int * p_some_data {&some_data}; // Compiler error.
 	//*p_some_data = 66;
-    */
+
 
 
 	//Both pointer and pointed to value are constant
-    /*
+
     const int number5 {459};
     const int* const p_number5 {&number5 };
     std::cout << "Pointer is constant, value pointed to is constant : " << std::endl;
@@ -133,7 +133,7 @@ int main(){
     //p_number5 = &number6;  // Error : Trying to assign to read only location
 	
 	std::cout << std::endl;
-    */
+
 
 
 	//Pointer is constant (can't make it point anywere else)
