@@ -19,7 +19,7 @@ int main(){
     //Print arr1
     std::cout << "arr1 : ";
     for (size_t i{}; i < std::size(arr1); ++i) {
-        std::cout << *(p_arr0 + i) << " ";
+        std::cout << *(p_arr1 + i) << " ";
     }
     std::cout << std::endl;
 

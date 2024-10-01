@@ -5,18 +5,18 @@
 int main(){
 
 	//Case1 : Uninitialized pointer
-    /*
+
 	int * p_number; // Dangling uninitialized pointer
    
 	std::cout << std::endl;
 	std::cout << "Case 1 : Uninitialized pointer : ." << std::endl;
 	std::cout << "p_number : " << p_number << std::endl;
     std::cout << "*p_number : " << *p_number << std::endl; //CRASH!
-    */
+
 
 
    //Case 2 : deleted pointer
-   /*
+
    std::cout << std::endl;
    std::cout << "Case 2 : Deleted pointer" << std::endl;
    int * p_number1 {new int{67}};
@@ -26,11 +26,11 @@ int main(){
    delete p_number1;
 		
    std::cout << "*p_number1(after delete) : " << *p_number1 << std::endl;
-   */
+
 
 
 	//Case 3 : Multiple pointers pointing to same address
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Case 3 : Multiple pointers pointing to same address : " << std::endl;
 	
@@ -46,11 +46,11 @@ int main(){
     //p_number4 points to deleted memory. Dereferncing it will lead to
 	//undefined behaviour : Crash/ garbage or whatever
     std::cout<< "p_number4(after deleting p_number3) - " << p_number4 << " - " << *p_number4 << std::endl;
-    */
+
 
 
     //Solution1 : Initialize your pointers immediately upon declaration
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Solution 1 : " << std::endl;
     int *p_number5{nullptr};
@@ -63,13 +63,13 @@ int main(){
 	}else{
         std::cout << "Invalid address" << std::endl;
     }
-    */
+
 
 
 	//Solution 2 : 
     //Right after you call delete on a pointer, remember to reset
 	//the pointer to nullptr to make it CLEAR it doesn't point anywere
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Solution 2 : " << std::endl;
     int *p_number7{new int{82}};
@@ -86,7 +86,7 @@ int main(){
 	}else{
         std::cout << "Invalid memory access!" << std::endl;
     }
-    */
+
 
 
 	//Solution 3 
