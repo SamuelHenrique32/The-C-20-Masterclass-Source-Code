@@ -18,9 +18,9 @@ int main(){
     std::cout << "=======================" << std::endl;
 
     std::cout << "ref_int_data : " << ref_int_data << std::endl;
-    std::cout << "&ref_int_data : " << &ref_int_data << std::endl;
+    std::cout << "&ref_int_data : " << &ref_int_data << std::endl; // Same address as int_data
     std::cout << "ref_double_data : " << ref_double_data << std::endl;
-    std::cout << "&ref_double_data : " << &ref_double_data << std::endl;
+    std::cout << "&ref_double_data : " << &ref_double_data << std::endl; // Same address as double_data
 
     int_data = 111;
     double_data = 67.2;
