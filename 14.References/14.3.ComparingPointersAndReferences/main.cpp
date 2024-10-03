@@ -18,7 +18,9 @@ int main(){
 	
 	//Reading
 	std::cout << "double_value : " << double_value << std::endl;
+	std::cout << "&double_value : " << &double_value << std::endl;
 	std::cout << "ref_double_value : " << ref_double_value << std::endl;
+	std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
 	std::cout << "p_double_value : " << p_double_value << std::endl;
 	std::cout << "*p_double_value : " << *p_double_value << std::endl;
 	
@@ -42,9 +44,15 @@ int main(){
 
 
     double some_other_double{78.45};
+	std::cout << std::endl;	
+	std::cout << "&some_other_double : " << &some_other_double << std::endl;
 
     //Make the reference reference something else.
-    ref_double_value = some_other_double;
+	std::cout << std::endl;
+	std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
+    ref_double_value = some_other_double; // This is not reassigning the reference, it is changing the value of the variable that the reference is referencing
+	std::cout << "&double_value : " << &double_value << std::endl;
+	std::cout << "&ref_double_value : " << &ref_double_value << std::endl;
 
     std::cout << "Making the reference reference something else..." << std::endl;
     std::cout << std::endl;

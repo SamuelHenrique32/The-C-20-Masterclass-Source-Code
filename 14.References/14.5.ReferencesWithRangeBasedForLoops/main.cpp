@@ -14,7 +14,7 @@ int main(){
     }
 	std::cout << std::endl;
 
-
+   //Modify the original array
    for ( auto& score : scores){
         score = score * 10;
     }
