@@ -4,7 +4,7 @@
 int main(){
 
 	//Concatenating two strings : The + operator
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Concatenating two strings : " << std::endl;
 
@@ -14,21 +14,21 @@ int main(){
 	std::string message = str1 + " my " + str2;
         
 	std::cout << "message : " << message << std::endl;
-    */
+
 
 	//Concatenating string literals : No, No - Compiler Error
 	//String literals are expanded into const char* arrays and C++ doesn't know
 	//how to add arrays with the + operator. Hence the compiler error.
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Concatenating string literals : No,No! Compiler Error " << std::endl;
 	
 	//std::string str3 { "Hello" + "World"}; // Compiler Error
 	//std::string str4 = "Hello" + "World";  // Compiler Error
-    */
+
 
 	//A few ways around string literal concatenation
-    /*
+
 	std::cout << std::endl;
 	std::cout << "A few ways around string literal concatenation" << std::endl;
             
@@ -56,13 +56,13 @@ int main(){
 		str9 = "Hello"s + " World";
 	}
 	std::cout << "str9 : " << str9 << std::endl;
-    */
+
 
 
 	//std::string is a compound type, it has properties and behaviors
 	//one of the behaviors is append. We access the behaviors using
 	//the . operator after the std::string variable name
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Using the append method : " << std::endl;
 	std::string str10 {"Hello"};
@@ -72,12 +72,12 @@ int main(){
         
 	std::string str13{std::string{"Hello"}.append(" World")};
 	std::cout << "str13 : " << str13 << std::endl;
-    */
+
 
 
 	//Append can do more than the + operator
 	//The + operator is just a convenience for basic concatenation
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Append method can do more than + operator : " << std::endl;
 	std::string str14 {"Hello "};
@@ -94,11 +94,11 @@ int main(){
 	//Direct output
 	std::string str19{"Hello "};
 	std::cout << "Direct output : " << str19.append(str16,4,5) << std::endl;
-    */
+
 
 
 	//Concatenating strings and characters
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Concatenating strings and characters : " << std::endl;
 	std::string str20 {"Hello"};
@@ -115,11 +115,11 @@ int main(){
 	std::string str25 {"I am here to see you."};
 	std::string str26 {str24 + ',' + ' ' + str25};
 	std::cout << "str26 : " << str26 << std::endl;
-    */
+
 
 
 	//Appending C-strings and char arrays
-    /*
+
 	std::cout << std::endl;
 	std::cout << "Appending C-Strings and char arrays : "<<std::endl;
 	const char message1[] {"World"};
@@ -129,18 +129,18 @@ int main(){
 	std::cout <<" + C-String : "  <<  std::string{"Hello "} + message2 << std::endl;
 	std::cout <<"append char array : "  <<  std::string{"Hello "}.append(message1) << std::endl;
 	std::cout <<"append C-String : "  <<  std::string{"Hello "}.append( message2)<< std::endl;
-	*/
+
 
     //Concatenating std::strings and numbers
         
-	std::string str26{"Hello"};
+	std::string str27{"Hello"};
         
-	str26 += std::to_string(67.5f); // Treats 67 as a character code
+	str27 += std::to_string(67.5f); // Treats 67 as a character code
 					// When using the += operator, C++ knows to treat the 
 					//integer operand as a character code and append that to our
 					//std::string. But what if we want the 67 appended to std::string
 					//literally
-    std::cout << "str26 : " << str26 << std::endl;
+    std::cout << "str27 : " << str27 << std::endl;
 
 
 

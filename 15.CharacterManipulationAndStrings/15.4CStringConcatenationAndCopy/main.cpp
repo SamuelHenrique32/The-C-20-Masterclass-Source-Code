@@ -4,7 +4,7 @@
 int main(){
 
 	//Concatenation
-    /*
+
 	std::cout << std::endl;
 	std::cout<< "std::strcat : " << std::endl;
 	//doc : https://en.cppreference.com/w/cpp/string/byte/strcat
@@ -15,11 +15,11 @@ int main(){
     std::cout << "dest : " << dest << std::endl; // Hello World
     std::strcat(dest, " Goodbye World!"); 
     std::cout << "dest : " << dest << std::endl; // Hello World Goodbye World!
-    */
+
 
 
 	//More concatenation
-    /*
+
 	std::cout << std::endl;
 	std::cout << "More std::strcat : " << std::endl;
 	
@@ -40,13 +40,13 @@ int main(){
     
     std::cout << "std::strlen(dest1) :" << std::strlen(dest1) << std::endl;
     std::cout << "dest1 : " << dest1 << std::endl;
-    */
+
 
 
     //std::strncat  : concatenates n characters from src to dest and
 	//returns a pointer to the result string
     //signature : char *strncat( char *dest, const char *src, std::size_t count );
-    /*
+
     std::cout << std::endl;
     std::cout << "std::strncat:" << std::endl;
     char dest2[50] { "Hello" };
@@ -60,11 +60,11 @@ int main(){
     //Or you can do std::strncat separately and print dest2
     std::strncat(dest2,source2,6);
     std::cout << "The concatenated string is : " << dest2 << std::endl;
-    */
+
 
 
     //std::strcpy - signature : char* strcpy( char* dest, const char* src );
-    /*
+
     std::cout << std::endl;
 	std::cout << "std::strcpy : " << std::endl;
     const char* source3 = "C++ is a multipurpose programming language.";
@@ -77,7 +77,7 @@ int main(){
     std::cout << "sizeof(dest3) : " << sizeof(dest3) << std::endl;
     std::cout << "std::strlen(dest3) : " << std::strlen(dest3) << std::endl;
     std::cout << "dest3 : " << dest3 << std::endl;
-    */
+
 
 
     //std::strncpy : Copy n characters from src to dest -
