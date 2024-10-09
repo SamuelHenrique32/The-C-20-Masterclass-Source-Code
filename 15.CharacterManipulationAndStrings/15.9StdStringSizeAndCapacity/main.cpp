@@ -40,6 +40,10 @@ int main(){
 
 
     //Capacity
+    //The vector::capacity() function is a built-in function which returns the size of the storage space currently allocated for the vector,
+    //expressed in terms of elements. This capacity is not necessarily equal to the vector size. It can be equal to or greater, with the extra
+    //space allowing to accommodate for growth without the need to reallocate on each insertion. The capacity does not suppose a limit on the size of the vector.
+    //When this capacity is exhausted and more is needed, it is automatically expanded by the container (reallocating it storage space).
     /*
     std::string str1 {"Hello World"};
     std::string str2;

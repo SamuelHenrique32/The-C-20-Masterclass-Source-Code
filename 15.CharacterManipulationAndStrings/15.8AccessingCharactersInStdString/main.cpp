@@ -86,7 +86,7 @@ int main(){
    //data()
     std::string str2 { "Hello World"};
     
-    char * data = str2.data();
+    char * data = str2.data(); // Returns a pointer to the block of memory containing the elements of the range
     std::cout << "Wrapped c string : " << data << std::endl;
     
     data[0] = 'B';// This also changes std::string.
