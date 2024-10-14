@@ -2,11 +2,14 @@
 #include <string_view>
 #include <cstring>
 
+//std::string_view provides read-only access to an existing string (a C-style string, a std::string, or another std::string_view) without making a copy. Read-only means that we
+//can access and use the value being viewed, but we can not modify it.
+
 
 int main(){
 
     //Showing the problem
-    /*
+
     std::string string {"Hello"};
     std::string string1 {string}; // Copy
     std::string string2 {string}; // Copy
@@ -14,11 +17,11 @@ int main(){
     std::cout  << "address of string : " <<  &string << std::endl;
     std::cout  << "address of string1 : " <<  &string1 << std::endl;
     std::cout  << "address of string2 : " <<  &string2 << std::endl;
-    */
+
 
 
    //Using string_view
-   /*
+
     std::string_view sv {"Hellooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"};
     std::string_view sv1 {sv}; // View viewing the hello literal
     std::string_view sv2 {sv1}; // Another view viewing hello 
@@ -29,11 +32,11 @@ int main(){
     std::cout << "sv : " << sv << std::endl;
     std::cout << "sv1 : " << sv1 << std::endl;
     std::cout << "sv2 : " << sv2 << std::endl;
-    */
+
 
 
    //Constructing string_view's
-   /*
+
     std::string string3 {"Regular std::string"};
     const char * c_string {"Regular C-String"};
     const char char_array[]{"Char array"}; // Null terminated
@@ -52,10 +55,10 @@ int main(){
     std::cout << "sv6 : " << sv6 << std::endl;
 	std::cout << "sv7 (constructed from other string_view) : " << sv7 << std::endl;
     std::cout << "Non null terminated string with std::string_view : " << sv8 << std::endl;
-    */
+
 
    //Changes to the original string are reflected in the string_view
-   /*
+
     char word [] {"Dog"};
     std::string_view sv9{word};
     
@@ -66,10 +69,10 @@ int main(){
     word[2] = 't';
     
     std::cout << "word : " << sv9 << std::endl;
-    */
+
 
    //Changing the view window : SHRINKING
-   /*
+
     const char * c_string1 { "The animals have left the region" };
     std::string_view sv10{c_string1};
     
@@ -87,11 +90,11 @@ int main(){
     
     //Changing the view doesn't change the viewed string : 
     std::cout << "Original sv10 viewed string : " << c_string1 << std::endl;
-    */
+
 
 
    //String_view shouldn't outlive whatever it is viewing
-   /*
+
     std::string_view sv11;
     
     {
@@ -103,19 +106,19 @@ int main(){
         //string4 goes out of scope here.
     }
     std::cout << "OUTSIDE --- sv1 is viewing : " << sv11 << std::endl;
-    */
+
 
 
    //data
-   /*
+
     std::string_view sv13 {"Ticket"};
     std::cout << "sv13 : " << sv13 << std::endl;
     std::cout << "std::strlen(sv13.data()) : " << std::strlen(sv13.data()) << std::endl;
-    */
+
 
 
    //Don't use data() on a modified view (through remove_prefix or remove_suffix)
-   /*
+
 	std::string_view sv14 {"Ticket"};
     sv14.remove_prefix(2);
     sv14.remove_suffix(2);
@@ -124,18 +127,18 @@ int main(){
     std::cout << sv14 << " has " << std::strlen(sv14.data()) << " characters(s)" << std::endl;
     std::cout << "sv14.data() is " << sv14.data() << std::endl;
     std::cout << "sv14 is " << sv14 << std::endl;
-    */
+
 
 
    //Don't view non null terminated strings
-   /*
+
     char char_array3[] {'H','e','l','l','o'};
     std::string_view sv15 {char_array3,std::size(char_array3)};
     
     std::cout << sv15 << " has " << std::strlen(sv15.data()) << " characters(s)" << std::endl;
     std::cout <<"sv15.data is  : " <<  sv15.data() << std::endl;
     std::cout << "sv15 is : " << sv15 << std::endl;
-    */
+
 
 
    //std::string behaviors
